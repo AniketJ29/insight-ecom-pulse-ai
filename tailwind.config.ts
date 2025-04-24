@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				insight: {
+					'blue': '#3b82f6',
+					'teal': '#14b8a6',
+					'dark': '#1e293b',
+					'light': '#f8fafc'
 				}
 			},
 			borderRadius: {
@@ -84,12 +91,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				},
+				'fade-out': {
+					from: { opacity: '1' },
+					to: { opacity: '0' }
+				},
+				'data-pulse': {
+					'0%': { boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)' },
+					'100%': { boxShadow: '0 0 0 0 rgba(59, 130, 246, 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-in-out',
+				'fade-out': 'fade-out 0.3s ease-in-out',
+				'data-pulse': 'data-pulse 1.5s infinite'
+			},
+			fontFamily: {
+				sans: ['Inter var', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
