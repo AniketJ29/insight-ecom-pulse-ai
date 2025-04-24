@@ -25,7 +25,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
-        <Sidebar defaultCollapsed={isMobile}>
+        <Sidebar>
           <SidebarNav />
         </Sidebar>
         <div className="flex flex-col flex-1">
